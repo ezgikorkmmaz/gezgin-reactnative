@@ -1,15 +1,14 @@
-import '../components/_locationApi';
 import React, {useEffect, useState, useContext} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image, Platform, Dimensions, SafeAreaView} from 'react-native';
 import TrackingMap from '../components/TrackingMap';
 import MainHeader from '../shared/MainHeader';
 import MapView, { Marker, AnimatedRegion, watchPositionAsync, Accuracy } from 'react-native-maps';
-import {Context as LocationContext} from '../context/LocationContext';
+
 
 const TrackScreen = ({navigation}) => {
-    const {addLocation} = useContext(LocationContext);
+   
 
-    const startWatching = async () => {
+    /*const startWatching = async () => {
         try{
             await watchPositionAsync({
                 accuracy: Accuracy.BestForNavigation,
@@ -23,7 +22,7 @@ const TrackScreen = ({navigation}) => {
         }catch(e) {
 
         }
-    }
+    }*/
 
     return (
         <View>

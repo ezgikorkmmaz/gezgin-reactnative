@@ -13,7 +13,6 @@ import EditProfile from './src/screens/EditProfile';
 import CameraScreen from './src/screens/CameraScreen';
 import TrackScreen from './src/screens/TrackScreen';
 import Map from './src/components/Map';
-import {Provider as LocationProvider} from './src/context/LocationContext';
 import HistoryScreen from './src/screens/HistoryScreen';
 
 const navigator = createStackNavigator({ //switch navigator v5 olmadıgı içim implement edilebilir sonra
@@ -68,6 +67,14 @@ const App = createAppContainer(navigator);
 
 export default () => {
   return(
+    <AuthProvider>
+       <App/>
+    </AuthProvider>
+  )
+};
+/*
+export default () => {
+  return(
     <LocationProvider>
     <AuthProvider>
        <App
@@ -78,4 +85,4 @@ export default () => {
     </AuthProvider>
     </LocationProvider>
   )
-};
+};*/

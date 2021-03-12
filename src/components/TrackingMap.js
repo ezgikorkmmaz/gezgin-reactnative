@@ -11,10 +11,6 @@ const LATITUDE_DELTA = 0.0922;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;*/
 
 const TrackingMap = ({navigation}) => {
-    const {state} = useContext(LocationContext);
-
-    console.log(state);
-
     return (
     <MapView
     style={styles.map}
